@@ -1,0 +1,64 @@
+{
+    "output": {
+        "folder": "streams",
+        "bestFolder": "best",
+        "masterFolder": "master"
+    },
+    "channels": [
+        {
+            "name": "ATV Avrupa",
+            "slug": "atvavrupa",
+            "url": "https://www.atvavrupa.tv/canli-yayin"
+        },
+        {
+            "name": "Başka TV [Kick]",
+            "slug": "baskatv-kick",
+            "url": "https://kick.com/baska-tv"
+        },
+        {
+            "name": "Bizimev TV",
+            "slug": "bizimevtv",
+            "url": "https://www.youtube.com/@bizimevtv2000/live"
+        },
+        {
+            "name": "Diyanet Çocuk",
+            "slug": "diyanetcocuk",
+            "url": "https://www.youtube.com/watch?v=_VsMIRdOtXI&pp=uAQw"
+        },
+        {
+            "name": "Euro 90 TV",
+            "slug": "euro90tv",
+            "url": "https://www.twitch.tv/euro90tvglobal"  
+        },
+        {
+            "name": "Kuzey TV",
+            "slug": "kuzeytv",
+            "url": "https://kick.com/kuzeymedyatv"  
+        },
+        {
+            "name": "Safa TV",
+            "slug": "safatv",
+            "url": "https://www.twitch.tv/safatv95"  
+        },
+        {
+            "name": "Serhat TV",
+            "slug": "serhattv",
+            "url": "https://www.twitch.tv/serhattvlive"
+        },
+        {
+            "name": "Sirius TV",
+            "slug": "siriustv",
+            "url": "https://www.twitch.tv/siriushdtv"  
+        },
+        {
+            "name": "Teleon",
+            "slug": "teleon",
+            "url": "https://kick.com/teleontv"  
+        },
+        {
+            "name": "TV Kayseri",
+            "slug": "tvkayseri",
+            "url": "https://www.twitch.tv/tvkayseri"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+name: M3U8 Listelerini Guncelle
+
+on:
+  schedule:
+    - cron: '0 */3 * * *' # Her 3 saatte bir otomatik çalışır
+  workflow_dispatch: # Manuel tetikleme butonu
+  push:
+    paths:
+      - 'config.json' # Bu dosya değiştiğinde otomatik çalışır
+
+permissions:
+  contents: write
+
+jobs:
+  guncelle:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repoyu Klonla
+        uses: actions/checkout@v4
+
+      - name: Python Kurulumu
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: streamlink Yükle
+        run: pip install --upgrade streamlink requests
+
+      - name: Scripti Çalıştır
+        run: python update_list.py config.json
+
+      - name: Değişiklikleri Kaydet ve Yükle
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add .
+          git commit -m "updated streams $(date +'%Y-%m-%d %H:%M:%S') [skip ci]" || echo "No updated streams"
+          git push
